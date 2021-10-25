@@ -14,18 +14,35 @@
         function computerPlay() {
             const randomChoice = Math.floor(Math.random() * choices.length);
             if (randomChoice === 0) {
-                return "Rock"
+                return "rock"
             } else if (randomChoice === 1) {
-                return "Paper"
+                return "paper"
             } else {
-                return "Scissors"
+                return "scissors"
             }
         }
-        console.log(computerPlay())
 
-        function playRound(playerSelection, Computerselection){
-                
+        function playRound(playerSelection, computerSelection){
+               let selection = playerSelection.toLowerCase();    
+
+                if (selection === "rock" && computerSelection === "scissors"){
+                    return "you win!";
+                }else if(selection === "paper" && computerSelection === "rock"){
+                    return "you win!";
+                }else if(selection === "scissors" && computerSelection === "paper"){
+                    return "you win!";
+                }else if(selection === computerSelection){
+                    return "It's a tie!";
+                }else{
+                    return "You lose";
+                }
         }
+
+        let x = prompt("Rock, paper or scissors?:")
+        let y = computerPlay();
+        console.log(x);
+        console.log(y);
+        console.log(playRound(x,y));
     </script>
 </body>
 
