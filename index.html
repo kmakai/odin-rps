@@ -69,6 +69,17 @@
 
         game();
        // console.log(playRound(x,y))
+       console.log("Final Scores");
+       console.log("player: " + playerScore);
+       console.log("Computer: " + comScore);
+
+       if(playerScore > comScore){
+           console.log("You win!")
+       }else if(playerScore === comScore){
+           console.log("It's a tie!");
+       }else{
+           console.log("You lose!");
+       }
     </script>
 </body>
 
