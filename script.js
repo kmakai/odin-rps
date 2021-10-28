@@ -75,20 +75,7 @@ scissorsBtn.addEventListener('click', function () {
 });
 
 
-outCome = result.textContent;
-if (outCome === "you win!") {
-    playerScore = playerScore + 1;
-} else if (outCome === "you lose!") {
-    comScore = comScore + 1;
-}
-
-
-
-
-
-
-
-if (playerScore > comScore) {
+if (playerScore >  comScore) {
     console.log("You win!")
 } else if (playerScore === comScore) {
     console.log("It's a tie!");
