@@ -6,7 +6,7 @@ const rockBtn = document.querySelector(".rock");
 const paperBtn = document.querySelector(".paper");
 const scissorsBtn = document.querySelector(".scissors");
 const choices = ['rock', 'paper', 'scissors'];
-
+const result = document.querySelector("#results");
 
 
 function computerPlay() {
@@ -36,26 +36,55 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 
-function game() {
 
-    // for (i = 0; i < 5; i++) {
-    //let x = prompt("rock paper or scissors?:");
-    // outCome = playRound(x, computerPlay());
-    // console.log(outCome);
 
+
+
+rockBtn.addEventListener('click', function () {
+    result.textContent = playRound(rockBtn.innerHTML, computerPlay());
+    outCome = result.textContent;
     if (outCome === "you win!") {
         playerScore = playerScore + 1;
     } else if (outCome === "you lose!") {
         comScore = comScore + 1;
     }
-    console.log(comScore);
-    console.log(playerScore);
+    console.log("Computer: " + comScore);
+    console.log("Player: " + playerScore);
+});
+paperBtn.addEventListener('click', function () {
+    result.textContent = playRound(paperBtn.innerHTML, computerPlay());
+    outCome = result.textContent;
+    if (outCome === "you win!") {
+        playerScore = playerScore + 1;
+    } else if (outCome === "you lose!") {
+        comScore = comScore + 1;
+    }
+    console.log("Computer: " + comScore);
+    console.log("Player: " + playerScore);
+});
+scissorsBtn.addEventListener('click', function () {
+    result.textContent = playRound(scissorsBtn.innerHTML, computerPlay());
+    outCome = result.textContent;
+    if (outCome === "you win!") {
+        playerScore = playerScore + 1;
+    } else if (outCome === "you lose!") {
+        comScore = comScore + 1;
+    }
+    console.log("Computer: " + comScore);
+    console.log("Player: " + playerScore);
+});
 
+
+outCome = result.textContent;
+if (outCome === "you win!") {
+    playerScore = playerScore + 1;
+} else if (outCome === "you lose!") {
+    comScore = comScore + 1;
 }
 
-let y = computerPlay();
-rockBtn.addEventListener('click',
-    playRound("rock",y));
+
+
+
 
 
 
