@@ -7,7 +7,9 @@ const paperBtn = document.querySelector(".paper");
 const scissorsBtn = document.querySelector(".scissors");
 const choices = ['rock', 'paper', 'scissors'];
 const result = document.querySelector("#results");
-
+const cScore = document.querySelector(".cscore");
+const pScore = document.querySelector(".pscore");
+const finalResult = document.querySelector(".fscore");
 
 function computerPlay() {
     const randomChoice = Math.floor(Math.random() * choices.length);
@@ -48,8 +50,25 @@ rockBtn.addEventListener('click', function () {
     } else if (outCome === "you lose!") {
         comScore = comScore + 1;
     }
-    console.log("Computer: " + comScore);
-    console.log("Player: " + playerScore);
+    cScore.textContent = "Computer: " + comScore;
+    pScore.textContent = "Player: " + playerScore;
+    if (playerScore === 5 || comScore === 5) {
+        if (playerScore > comScore) {
+            finalResult.textContent = "You win!";
+            playerScore = 0;
+            comScore = 0;
+        } else if (playerScore === comScore) {
+            finalResult.textContent = "It's a tie!";
+            playerScore = 0;
+            comScore = 0;
+        } else {
+            finalResult.textContent = "You lose!";
+            playerScore = 0;
+            comScore = 0;
+        }
+    } else {
+        finalResult.textContent = " ";
+    }
 });
 paperBtn.addEventListener('click', function () {
     result.textContent = playRound(paperBtn.innerHTML, computerPlay());
@@ -59,8 +78,25 @@ paperBtn.addEventListener('click', function () {
     } else if (outCome === "you lose!") {
         comScore = comScore + 1;
     }
-    console.log("Computer: " + comScore);
-    console.log("Player: " + playerScore);
+    cScore.textContent = "Computer: " + comScore;
+    pScore.textContent = "Player: " + playerScore;
+    if (playerScore === 5 || comScore === 5) {
+        if (playerScore > comScore) {
+            finalResult.textContent = "You win!";
+            playerScore = 0;
+            comScore = 0;
+        } else if (playerScore === comScore) {
+            finalResult.textContent = "It's a tie!";
+            playerScore = 0;
+            comScore = 0;
+        } else {
+            finalResult.textContent = "You lose!";
+            playerScore = 0;
+            comScore = 0;
+        }
+    } else {
+        finalResult.textContent = " ";
+    }
 });
 scissorsBtn.addEventListener('click', function () {
     result.textContent = playRound(scissorsBtn.innerHTML, computerPlay());
@@ -70,15 +106,26 @@ scissorsBtn.addEventListener('click', function () {
     } else if (outCome === "you lose!") {
         comScore = comScore + 1;
     }
-    console.log("Computer: " + comScore);
-    console.log("Player: " + playerScore);
+    cScore.textContent = "Computer: " + comScore;
+    pScore.textContent = "Player: " + playerScore;
+    if (playerScore === 5 || comScore === 5) {
+        if (playerScore > comScore) {
+            finalResult.textContent = "You win!";
+            playerScore = 0;
+            comScore = 0;
+        } else if (playerScore === comScore) {
+            finalResult.textContent = "It's a tie!";
+            playerScore = 0;
+            comScore = 0;
+        } else {
+            finalResult.textContent = "You lose!";
+            playerScore = 0;
+            comScore = 0;
+        }
+    } else {
+        finalResult.textContent = " ";
+    }
 });
 
 
-if (playerScore >  comScore) {
-    console.log("You win!")
-} else if (playerScore === comScore) {
-    console.log("It's a tie!");
-} else {
-    console.log("You lose!");
-}
+
