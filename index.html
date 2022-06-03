@@ -5,8 +5,42 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="script.js" defer></script>
+    <link rel="stylesheet" href="styles.css" />
     <title>ROCK PAPER SCISSORS</title>
   </head>
 
-  <body></body>
+  <body>
+    <div class="game-container">
+      <div class="scores-container">
+        <div class="player-score">
+          <p class="player-name">PLAYER</p>
+          <p class="player-score-number">0</p>
+        </div>
+        <div class="computer-score">
+          <p class="computer-name">COMPUTER</p>
+          <p class="computer-score-number">0</p>
+        </div>
+      </div>
+      <div class="versus-area">
+        <div class="player-choice">
+          <div class="rock-choice">
+            <p class="rock-name">Rock</p>
+          </div>
+          <div class="paper-choice">
+            <p class="paper-name">Paper</p>
+          </div>
+          <div class="scissors-choice">
+            <p class="scissors-name">Scissors</p>
+          </div>
+        </div>
+        <span>VS.</span>
+        <div class="computer-choice"></div>
+      </div>
+      <div class="player-choices">
+        <img src="rock.png" alt="rock" class="rock-img" id="0" />
+        <img src="paper.png" alt="paper" class="paper-img" id="1" />
+        <img src="scissors.png" alt="scissors" class="scissors-img" id="2" />
+      </div>
+    </div>
+  </body>
 </html>

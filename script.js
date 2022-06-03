@@ -34,13 +34,18 @@ function playRound(playerSelection, computerSelection) {
 
 //prompt("Rock, Paper or scissors?:")
 const game = function () {
-  let rounds = 0;
+  let rounds = 1;
   while (playerScore !== 5 && comScore !== 5) {
-    console.log(`round: ${rounds++}`);
+    console.log(`-----round: ${rounds++}----`);
     console.log(playRound(computerPlay(), computerPlay()));
     console.log("computer score: " + comScore);
     console.log("player score: " + playerScore);
     console.log("-------------------------");
     // rounds--;
   }
+
+  if (playerScore > comScore) console.log("PLAYER WINS!!!");
+  if (comScore > playerScore) console.log("COMPUTER WINS!!!");
+  playerScore = 0;
+  comScore = 0;
 };
