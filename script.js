@@ -1,11 +1,4 @@
-// let outCome;
-// const rockBtn = document.querySelector(".rock");
-// const paperBtn = document.querySelector(".paper");
-// const scissorsBtn = document.querySelector(".scissors");
-// const result = document.querySelector("#results");
-// const cScore = document.querySelector(".cscore");
-// const pScore = document.querySelector(".pscore");
-// const finalResult = document.querySelector(".fscore");
+"use strict";
 
 const choices = ["rock", "paper", "scissors"];
 
@@ -23,7 +16,7 @@ function playRound(playerSelection, computerSelection) {
   console.log("player: " + playerSelection);
 
   if (selection === "rock" && computerSelection === "scissors") {
-    playerScore;
+    playerScore++;
     return "you win!";
   } else if (selection === "paper" && computerSelection === "rock") {
     playerScore++;
@@ -39,97 +32,15 @@ function playRound(playerSelection, computerSelection) {
   }
 }
 
+//prompt("Rock, Paper or scissors?:")
 const game = function () {
-  let rounds = 5;
-  while (rounds > 0) {
+  let rounds = 0;
+  while (playerScore !== 5 && comScore !== 5) {
+    console.log(`round: ${rounds++}`);
     console.log(playRound(computerPlay(), computerPlay()));
-    rounds--;
-    console.log("computer: " + comScore);
-    console.log("player: " + playerScore);
+    console.log("computer score: " + comScore);
+    console.log("player score: " + playerScore);
+    console.log("-------------------------");
+    // rounds--;
   }
 };
-
-rockBtn.addEventListener("click", function () {
-  result.textContent = playRound(rockBtn.innerHTML, computerPlay());
-  outCome = result.textContent;
-  if (outCome === "you win!") {
-    playerScore = playerScore + 1;
-  } else if (outCome === "you lose!") {
-    comScore = comScore + 1;
-  }
-  cScore.textContent = "Computer: " + comScore;
-  pScore.textContent = "Player: " + playerScore;
-  if (playerScore === 5 || comScore === 5) {
-    if (playerScore > comScore) {
-      finalResult.textContent = "You win!";
-      playerScore = 0;
-      comScore = 0;
-    } else if (playerScore === comScore) {
-      finalResult.textContent = "It's a tie!";
-      playerScore = 0;
-      comScore = 0;
-    } else {
-      finalResult.textContent = "You lose!";
-      playerScore = 0;
-      comScore = 0;
-    }
-  } else {
-    finalResult.textContent = " ";
-  }
-});
-paperBtn.addEventListener("click", function () {
-  result.textContent = playRound(paperBtn.innerHTML, computerPlay());
-  outCome = result.textContent;
-  if (outCome === "you win!") {
-    playerScore = playerScore + 1;
-  } else if (outCome === "you lose!") {
-    comScore = comScore + 1;
-  }
-  cScore.textContent = "Computer: " + comScore;
-  pScore.textContent = "Player: " + playerScore;
-  if (playerScore === 5 || comScore === 5) {
-    if (playerScore > comScore) {
-      finalResult.textContent = "You win!";
-      playerScore = 0;
-      comScore = 0;
-    } else if (playerScore === comScore) {
-      finalResult.textContent = "It's a tie!";
-      playerScore = 0;
-      comScore = 0;
-    } else {
-      finalResult.textContent = "You lose!";
-      playerScore = 0;
-      comScore = 0;
-    }
-  } else {
-    finalResult.textContent = " ";
-  }
-});
-scissorsBtn.addEventListener("click", function () {
-  result.textContent = playRound(scissorsBtn.innerHTML, computerPlay());
-  outCome = result.textContent;
-  if (outCome === "you win!") {
-    playerScore = playerScore + 1;
-  } else if (outCome === "you lose!") {
-    comScore = comScore + 1;
-  }
-  cScore.textContent = "Computer: " + comScore;
-  pScore.textContent = "Player: " + playerScore;
-  if (playerScore === 5 || comScore === 5) {
-    if (playerScore > comScore) {
-      finalResult.textContent = "You win!";
-      playerScore = 0;
-      comScore = 0;
-    } else if (playerScore === comScore) {
-      finalResult.textContent = "It's a tie!";
-      playerScore = 0;
-      comScore = 0;
-    } else {
-      finalResult.textContent = "You lose!";
-      playerScore = 0;
-      comScore = 0;
-    }
-  } else {
-    finalResult.textContent = " ";
-  }
-});
