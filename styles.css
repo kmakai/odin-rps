@@ -3,7 +3,7 @@
   margin: 0;
   box-sizing: border-box;
 
-  border: 1px solid salmon;
+  /* border: 1px solid salmon; */
 }
 html {
   font-size: 62.5%;
@@ -20,4 +20,79 @@ body {
 
 img {
   width: 20rem;
+}
+
+.game-container {
+  display: flex;
+  flex-direction: column;
+
+  /* height: 80%; */
+}
+
+.scores-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.player-score {
+}
+.winner {
+  font-size: 4.8rem;
+}
+
+.player-name {
+  font-size: 3.8rem;
+}
+
+.player-score-number {
+  font-size: 3.2rem;
+}
+
+.computer-score {
+}
+
+.computer-name {
+  font-size: 3.8rem;
+}
+
+.computer-score-number {
+  font-size: 3.2rem;
+}
+
+.versus-area {
+  display: grid;
+  grid-template-columns: 4fr 1fr 4fr;
+  column-gap: 2.4rem;
+
+  margin: 6.4rem;
+}
+
+.versus-area p {
+  font-size: 3.8rem;
+}
+
+.player-choice,
+.computer-choice {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 24rem;
+}
+
+.vsspan {
+  align-self: center;
+  text-align: center;
+
+  font-size: 4.8rem;
+}
+
+h1 {
+  font-size: 3.2rem;
+  text-align: center;
+}
+.player-choices {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2.4rem;
 }

@@ -12,8 +12,8 @@ function computerPlay() {
 
 function playRound(playerSelection, computerSelection) {
   let selection = playerSelection.toLowerCase();
-  console.log("computer: " + computerSelection);
-  console.log("player: " + playerSelection);
+  // console.log("computer: " + computerSelection);
+  // console.log("player: " + playerSelection);
 
   if (selection === "rock" && computerSelection === "scissors") {
     playerScore++;
